@@ -29,10 +29,10 @@
 const path = require("path");
 
 // Step 1:
-app.use(express.static(path.resolve(__dirname, "./blog_frontend/build")));
+app.use(express.static(path.resolve(__dirname, "./client/build")));
 // Step 2:
 app.get("*", function (request, response) {
-  response.sendFile(path.resolve(__dirname, "./blog_frontend/build", "index.html"));
+  response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
 });
 
     app.listen(port,()=>console.log(`The app is running on Port: ${port}`));
