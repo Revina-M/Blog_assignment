@@ -5,7 +5,7 @@
     require('dotenv').config();
 
     const app = express();
-    // const port = process.env.PORT || 8080;
+    const port = process.env.PORT || 8080;
 
     app.use(cors());
     app.use(express.json());
@@ -35,6 +35,4 @@ app.get("*", function (request, response) {
   response.sendFile(path.resolve(__dirname, "./blog_frontend/build", "index.html"));
 });
 
-http.listen((process.env.PORT || 8080), function(){
-    console.log('listening on *:8080');
-  });
+    app.listen(port,()=>console.log(`The app is running on Port: ${port}`));

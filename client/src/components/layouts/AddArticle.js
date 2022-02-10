@@ -32,7 +32,7 @@ function AddArticle(props) {
     return (
         <AddArticleContainer>
             <div className='container'>
-        <h1>Add New Article</h1>
+        <h1 color='white'>Add New Article</h1>
         <br></br>
         <form onSubmit={changeOnClick} encType="multipart/form-data">
   <div className="form-group">

@@ -29,6 +29,7 @@ const {posts}=props;
                     <Link to="/delete-article" className='btn btn-outline-danger'>
                         Delete Article
                     </Link>
+                    
                 </div>
             </div>
             </div>
@@ -41,5 +42,5 @@ export default Articles;
 
 const MainContainer = styled.div`
     margin:7rem 0;
-    color:white;
+    color:white
 `;

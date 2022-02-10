@@ -1,4 +1,5 @@
 import React,{useEffect, useState} from 'react';
+import { Link } from 'react-router-dom';
 import './Signup.css';
 import validation from './validation';
 import Login from './Login';
@@ -58,7 +59,12 @@ const [isSubmit,setIsSubmit]= useState(false);
 					<label for="chk" aria-hidden="true">Login</label>
 					<input type="email" name="email" placeholder="Email" required=""/>
 					<input type="password" name="pswd" placeholder="Password" required=""/>
-					<button>Login</button>
+                    <div className='row my-5'>
+                    <div className='col-sm-5'></div>
+                    <div className='col-sm-2'>
+					<Link to="/" className='btn btn-info'>Login</Link>
+                    </div>
+                    </div>
 				</form>
 			</div>
 	</div>

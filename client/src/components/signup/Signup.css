@@ -96,3 +96,7 @@ button:hover{
     height:0.1px;
     text-align: center;
 }
+
+.btn{
+	justify-content: center;
+}
