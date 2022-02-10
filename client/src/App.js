@@ -29,8 +29,8 @@ function App() {
     <Routes>
     <Route exact path="/" element={<Articles posts={posts}/>} />
     <Route path="/article/:id" element={<Article  posts={posts}/>} />
-    {/* <Route path="/update/:id" element={<EditArticle posts={posts}/>} /> */}
-    {/* <Route path="/add-article" element={<AddArticle/>} /> */}
+    <Route path="/update/:id" element={<EditArticle posts={posts}/>} />
+    <Route path="/add-article" element={<AddArticle/>} />
     </Routes>
     <Footer/>
     </div>
