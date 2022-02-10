@@ -41,4 +41,5 @@ export default Articles;
 
 const MainContainer = styled.div`
     margin:7rem 0;
+    color:white;
 `;

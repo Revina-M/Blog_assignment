@@ -10,6 +10,8 @@ import Article from './components/layouts/Article';
 import Articles from './components/Articles';
 import AddArticle from './components/layouts/AddArticle';
 import EditArticle from './components/layouts/EditArticle';
+import Signup from './components/signup/Signup';
+import Login from './components/signup/Login';
 
 function App() {
   const[posts,setPosts] = useState([]);
@@ -31,6 +33,8 @@ function App() {
     <Route path="/article/:id" element={<Article  posts={posts}/>} />
     <Route path="/update/:id" element={<EditArticle posts={posts}/>} />
     <Route path="/add-article" element={<AddArticle/>} />
+    <Route path="/signup" element={<Signup/>} />
+    <Route path="/login" element={<Login/>} />
     </Routes>
     <Footer/>
     </div>
