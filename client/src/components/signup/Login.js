@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import './Signup.css';
-import validation from './validation';
+import lvalid from './lvalid';
 import Welcome from './Welcome';
 import Signup from './Signup';
 
@@ -30,7 +30,7 @@ const [isSubmit,setIsSubmit]= useState(false);
 
     const handleSubmit = (event)=>{
         event.preventDefault();
-        setFormErrorValues(validation(formValues));
+        setFormErrorValues(lvalid(formValues));
         setIsSubmit(true);
     }
     return (
@@ -50,15 +50,11 @@ const [isSubmit,setIsSubmit]= useState(false);
                     <p className="error">{formErrorValues.password}</p>
                     <br></br>
                         <button >Validate Login</button>
-					
-                    <div className='row my-5'>
-       <div className='col-sm-4'>
+                        <br></br>
+
        <Link to="/signup" className='btn btn-primary'>SignUp</Link>
-        </div>
-        <div className='col-sm-2'>
-        <Link to="/home" className='btn btn-primary'>View Blogs</Link>
-        </div>
-        </div>   
+        
+        
 				</form>
 			</div>
 	</div>
