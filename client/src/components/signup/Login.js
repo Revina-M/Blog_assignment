@@ -24,7 +24,7 @@ const [isSubmit,setIsSubmit]= useState(false);
     
     useEffect(() => {
         if (Object.keys(formErrorValues).length === 0 && isSubmit) {
-            alert("Login successful");
+            alert("Login successful.");
         }
     }, [formErrorValues]);
 
@@ -36,14 +36,12 @@ const [isSubmit,setIsSubmit]= useState(false);
     return (
         <div>
              {/* <pre className="pretext">{JSON.stringify(formValues,undefined,2)}</pre> 	 */}
-           
+            <div className="main"> 
            
 		<input type="checkbox" id="chk" aria-hidden="true"/>
-        console.log({Object.keys(formErrorValues).length});
-        {Object.keys(formErrorValues).length === 0 && isSubmit ? (<Login/>) : (<pre className='pretext'></pre>)}
-			
-    { /*Login*/}
-			<div className="login1" >
+       
+        {Object.keys(formErrorValues).length === 0 && isSubmit ? (<Welcome />) : (<pre className='pretext'></pre>)}
+        <div className="login1" >
 				<form onSubmit={handleSubmit}>
 					<label htmlFor="chk" aria-hidden="true">Login</label>
 					<input type="email" name="email" placeholder="Email" required="" value={formValues.email} onChange={handleChange}/>
@@ -53,16 +51,25 @@ const [isSubmit,setIsSubmit]= useState(false);
                     <br></br>
                         <button >Login</button>
                
-                    <br></br>
+                 
                     
 					
-                   
+
                 
+                    
+					
+                    <div className='row my-5'>
+       <div className='col-sm-4'>
+       <Link to="/signup" className='btn btn-primary'>SignUp</Link>
+        </div>
+        <div className='col-sm-2'>
+        <Link to="/home" className='btn btn-primary'>View Blogs</Link>
+        </div>
+        </div>   
 				</form>
-                <Link to="/signup" className='btn btn-primary'>SignUp</Link>
 			</div>
 	</div>
-       
+        </div>
     );
 }
 
