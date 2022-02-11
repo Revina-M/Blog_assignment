@@ -29,12 +29,12 @@ const {posts}=props;
             <span>Author: {article.author}</span>
             <div className='row my-5'>
                 <div className='col-sm-2'>
-                    <Link to={`/home/update/${article._id}`} className='btn btn-outline-success'>
+                    <Link to={`/home`} className='btn btn-outline-success'>
                         Edit Article
                     </Link>
                 </div>
                 <div className='col-sm-2'>
-                    <Link to="/home/delete-article" className='btn btn-outline-danger'>
+                    <Link to="/home" className='btn btn-outline-danger'>
                         Delete Article
                     </Link>
                     

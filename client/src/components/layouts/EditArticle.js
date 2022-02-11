@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import styled from 'styled-components';
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 const EditArticle = props => {
     const {posts}=props;
@@ -42,8 +43,9 @@ const EditArticle = props => {
 
     return (
         <AddArticleContainer>
+            <Link to="/home" className='btn btn-info'>Home</Link>
             <div className='container'>
-        <h1>Add New Article</h1>
+        <h1>Edit Article</h1>
         <br></br>
         <form onSubmit={changeOnClick} encType="multipart/form-data">
   <div className="form-group">
