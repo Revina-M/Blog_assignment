@@ -17,13 +17,10 @@ const {posts}=props;
         </div>
         {posts.map((article,key)=>(
             <div className='container' key={key}>
-            <Link
-                to={{
-                    pathname:`/home/article/${article._id}`
-                }}
-            >
+          
+           
             <h2>{article.title}</h2>
-            </Link>
+           
             
             <p>{article.article}</p>
             <span>Author: {article.author}</span>
