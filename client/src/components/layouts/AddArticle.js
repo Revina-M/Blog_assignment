@@ -36,7 +36,7 @@ function AddArticle(props) {
 <Link to="/home" className='btn btn-info'>Home</Link>
 <br></br>
             <div className='container'>
-        <h1 color='white'>Add New Article</h1>
+        <h1 >Add New Article</h1>
         <br></br>
         <form onSubmit={changeOnClick} encType="multipart/form-data">
   <div className="form-group">

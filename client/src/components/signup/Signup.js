@@ -38,7 +38,7 @@ const [isSubmit,setIsSubmit]= useState(false);
             <div className="main"> 
            
 		<input type="checkbox" id="chk" aria-hidden="true"/>
-        console.log({Object.keys(formErrorValues).length});
+       
         {Object.keys(formErrorValues).length === 0 && isSubmit ? (<Login />) : (<pre className='pretext'></pre>)}
         { /*Signup*/}
 			<div className="signup">
@@ -51,7 +51,7 @@ const [isSubmit,setIsSubmit]= useState(false);
 					<p className="error">{formErrorValues.email}</p>
                     <input type="password" name="password" placeholder="Password" required="" value={formValues.password} onChange={handleChange}/>
 					<p className="error">{formErrorValues.password}</p>
-                    <br></br>
+                 
                     <button >Sign up</button>
                     <Link to="/" className='btn btn-info'>Login</Link>
 				</form>

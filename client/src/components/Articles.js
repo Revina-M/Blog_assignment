@@ -2,14 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import {Link} from "react-router-dom";
 
+
 const Articles = (props) => {
 const {posts}=props;
  return(
      <MainContainer>
-       
-        <Link to="/home/add-article" className='btn btn-info'>Add Article</Link>
-        <Link to="/" className='btn btn-info'>Log Out</Link>
-
+       <div className='row my-5'>
+       <div className='col-sm-2'>
+        <Link to="/home/add-article" className='aa btn btn-outline-info'>Add Article</Link>
+        </div>
+        <div className='col-sm-2'>
+        <Link to="/" className='bb btn btn-outline-info'>Log Out</Link>
+        </div>
+        </div>
         {posts.map((article,key)=>(
             <div className='container' key={key}>
             <Link
