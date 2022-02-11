@@ -21,7 +21,7 @@ function App() {
       .get("/articles")
       .then(res=>setPosts(res.data))
       .catch(error=>console.log(error));
-  },[]);
+  },[posts]);
  
   return (
    

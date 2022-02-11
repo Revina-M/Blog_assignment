@@ -22,7 +22,7 @@ function AddArticle(props) {
         setAuthor("");
 
         axios
-            .post("/home/articles/add",articles)
+            .post("/articles/add",articles)
             .then(res=>console.log(res.data))
             .catch(err=>{
                 console.log(err);
