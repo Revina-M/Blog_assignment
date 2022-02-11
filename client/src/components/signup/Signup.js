@@ -23,7 +23,7 @@ const [isSubmit,setIsSubmit]= useState(false);
     
     useEffect(() => {
         if (Object.keys(formErrorValues).length === 0 && isSubmit) {
-            alert("Signup successful");
+            alert("Signup successful.");
         }
     }, [formErrorValues]);
 
@@ -38,35 +38,44 @@ const [isSubmit,setIsSubmit]= useState(false);
             <div className="main"> 
            
 		<input type="checkbox" id="chk" aria-hidden="true"/>
-        {/* {Object.keys(formErrorValues).length === 0 && isSubmit ? (<login />) : (<pre className='pretext'>{JSON.stringify(formValues, undefined, 2)}</pre>)} */}
+        console.log({Object.keys(formErrorValues).length});
+        {Object.keys(formErrorValues).length === 0 && isSubmit ? (<Login />) : (<pre className='pretext'></pre>)}
         { /*Signup*/}
 			<div className="signup">
                 
 				<form onSubmit={handleSubmit}>
-					<label for="chk" aria-hidden="true">Sign up</label>
+					<label htmlFor="chk" aria-hidden="true">Sign up</label>
 					<input type="text" name="username" placeholder="User name" required="" value={formValues.username} onChange={handleChange}/>
 					<p className="error">{formErrorValues.username}</p>
                     <input type="email" name="email" placeholder="Email" required="" value={formValues.email} onChange={handleChange}/>
 					<p className="error">{formErrorValues.email}</p>
                     <input type="password" name="password" placeholder="Password" required="" value={formValues.password} onChange={handleChange}/>
 					<p className="error">{formErrorValues.password}</p>
+                    <br></br>
                     <button >Sign up</button>
+                    <Link to="/" className='btn btn-info'>Login</Link>
 				</form>
 			</div>
+
+            
     { /*Login*/}
-			<div className="login">
-				<form>
+			{/* <div className="login" >
+				<form onSubmit={handleSubmit}>
 					<label for="chk" aria-hidden="true">Login</label>
-					<input type="email" name="email" placeholder="Email" required=""/>
-					<input type="password" name="pswd" placeholder="Password" required=""/>
+					<input type="email" name="email" placeholder="Email" required="" value={formValues.email} onChange={handleChange}/>
+                    <p className="error">{formErrorValues.email}</p>
+					<input type="password" name="password" placeholder="Password" required="" value={formValues.password} onChange={handleChange}/>
+                    <p className="error">{formErrorValues.password}</p>
+                    <br></br>
                     <div className='row my-5'>
-                    <div className='col-sm-5'></div>
-                    <div className='col-sm-2'>
-					<Link to="/" className='btn btn-info'>Login</Link>
+                    <div className='col-sm-3'></div>
+                    <div className='col-sm-5'>
+                    <button >Login</button>
+					
                     </div>
                     </div>
 				</form>
-			</div>
+			</div> */}
 	</div>
         </div>
     );

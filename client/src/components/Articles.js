@@ -6,12 +6,15 @@ const Articles = (props) => {
 const {posts}=props;
  return(
      <MainContainer>
-        
+       
+        <Link to="/home/add-article" className='btn btn-info'>Add Article</Link>
+        <Link to="/" className='btn btn-info'>Log Out</Link>
+
         {posts.map((article,key)=>(
             <div className='container' key={key}>
             <Link
                 to={{
-                    pathname:`/article/${article._id}`
+                    pathname:`/home/article/${article._id}`
                 }}
             >
             <h2>{article.title}</h2>
@@ -21,12 +24,12 @@ const {posts}=props;
             <span>Author: {article.author}</span>
             <div className='row my-5'>
                 <div className='col-sm-2'>
-                    <Link to={`/update/${article._id}`} className='btn btn-outline-success'>
+                    <Link to={`/home/update/${article._id}`} className='btn btn-outline-success'>
                         Edit Article
                     </Link>
                 </div>
                 <div className='col-sm-2'>
-                    <Link to="/delete-article" className='btn btn-outline-danger'>
+                    <Link to="/home/delete-article" className='btn btn-outline-danger'>
                         Delete Article
                     </Link>
                     

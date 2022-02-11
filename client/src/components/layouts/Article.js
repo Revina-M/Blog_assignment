@@ -10,7 +10,7 @@ const Article = props => {
 
     useEffect(()=>{
         axios
-        .get(`/articles/${props.match.params.id}`)
+        .get(`/home/articles/${props.match.params.id}`)
         .then(res=>[
             setTitle(res.data.title),
             setArticle(res.data.article),

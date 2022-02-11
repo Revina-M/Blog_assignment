@@ -15,14 +15,14 @@ function Navbar() {
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav ms-auto">
       <li className="nav-item active">
-        <Link className="nav-link" to="/">Home <span className="sr-only"></span></Link>
+        <Link className="nav-link" to="/home">Home <span className="sr-only"></span></Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="add-article">Add Article</Link>
+        <Link className="nav-link" to="home/add-article">Add Article</Link>
       </li>
       
       <li className="nav-item">
-        <Link className="nav-link" to="signup">Sign In</Link>
+        <Link className="nav-link" to="/">Log Out</Link>
       </li>
       
     </ul>

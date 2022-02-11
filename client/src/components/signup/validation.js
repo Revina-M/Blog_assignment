@@ -1,3 +1,5 @@
+
+
 function validation(formValues) {
 
     const errors = {};
@@ -12,12 +14,14 @@ function validation(formValues) {
     else if (!regex.test(formValues.email)) {
         errors.email = "Email is invalid";
     }
+    
     if (!formValues.password) {
         errors.password = "Password is required";
     }
 else if (formValues.password.length < 5) {
         errors.password = "Password is too short";
     }
+   
 
     return errors;
 }

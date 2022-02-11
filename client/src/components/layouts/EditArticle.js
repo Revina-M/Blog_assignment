@@ -22,7 +22,7 @@ const EditArticle = props => {
         setAuthor("");
 
         axios
-            .post("/articles/add",articles)
+            .post("/home/articles/add",articles)
             .then(res=>console.log(res.data))
             .catch(err=>{
                 console.log(err);

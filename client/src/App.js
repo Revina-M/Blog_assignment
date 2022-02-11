@@ -12,6 +12,7 @@ import AddArticle from './components/layouts/AddArticle';
 import EditArticle from './components/layouts/EditArticle';
 import Signup from './components/signup/Signup';
 import Login from './components/signup/Login';
+import Welcome from './components/signup/Welcome';
 
 function App() {
   const[posts,setPosts] = useState([]);
@@ -26,15 +27,18 @@ function App() {
    
     <div className="App">
    
-    <Header/>
-    <Navbar/>
+    
+   <Header/>
+   
     <Routes>
-    <Route exact path="/" element={<Articles posts={posts}/>} />
-    <Route path="/article/:id" element={<Article  posts={posts}/>} />
-    <Route path="/update/:id" element={<EditArticle posts={posts}/>} />
-    <Route path="/add-article" element={<AddArticle/>} />
+    <Route exact path="/" element={<Login/>} />
     <Route path="/signup" element={<Signup/>} />
-    <Route path="/login" element={<Login/>} />
+    <Route path="/welcome" element={<Welcome/>} />
+    
+    <Route path="/home" element={<Articles posts={posts}/>} />
+    <Route path="/home/article/:id" element={<Article  posts={posts}/>} />
+    <Route path="/home/update/:id" element={<EditArticle posts={posts}/>} />
+    <Route path="/home/add-article" element={<AddArticle/>} />
     </Routes>
     <Footer/>
     </div>

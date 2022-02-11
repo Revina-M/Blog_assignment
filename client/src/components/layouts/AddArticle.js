@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import styled from 'styled-components';
 import axios from "axios";
+import {Link} from 'react-router-dom';
 
 function AddArticle(props) {
     const [title, setTitle] = useState("");
@@ -21,7 +22,7 @@ function AddArticle(props) {
         setAuthor("");
 
         axios
-            .post("/articles/add",articles)
+            .post("/home/articles/add",articles)
             .then(res=>console.log(res.data))
             .catch(err=>{
                 console.log(err);
@@ -31,6 +32,9 @@ function AddArticle(props) {
 
     return (
         <AddArticleContainer>
+
+<Link to="/home" className='btn btn-info'>Home</Link>
+<br></br>
             <div className='container'>
         <h1 color='white'>Add New Article</h1>
         <br></br>
