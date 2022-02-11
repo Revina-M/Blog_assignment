@@ -49,14 +49,7 @@ const [isSubmit,setIsSubmit]= useState(false);
 					<input type="password" name="password" placeholder="Password" required="" value={formValues.password} onChange={handleChange}/>
                     <p className="error">{formErrorValues.password}</p>
                     <br></br>
-                        <button >Login</button>
-               
-                 
-                    
-					
-
-                
-                    
+                        <button >Validate Login</button>
 					
                     <div className='row my-5'>
        <div className='col-sm-4'>
